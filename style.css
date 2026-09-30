@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111827;
+    color: white;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #6d28d9, #2563eb);
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+
+/* AUROMENU */
+
+#auromenu {
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 18px;
+}
+
+#auromenu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#auromenu a:hover {
+    color: #60a5fa;
+}
+
+
+/* CONTENIDO */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+section {
+    margin-bottom: 55px;
+}
+
+.bienvenida {
+    text-align: center;
+    padding: 35px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* BOTONES */
+
+button {
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+
+/* JUEGOS */
+
+.juegos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.juego {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.juego h3 {
+    color: #93c5fd;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.juego p {
+    line-height: 1.5;
+    color: #d1d5db;
+}
+
+
+/* CONTACTO */
+
+.contacto {
+    text-align: center;
+    background-color: #1f2937;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    text-align: center;
+    background-color: #0f172a;
+    padding: 20px;
+    color: #9ca3af;
+}
+
+
+/* ADAPTACIÓN A CELULAR */
+
+@media (max-width: 800px) {
+
+    .juegos-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    #auromenu {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .juegos-container {
+        grid-template-columns: 1fr;
+    }
+
+}

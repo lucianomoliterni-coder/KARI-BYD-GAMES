@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KARI BYD GAMES</title>
+
+    <style>
+        /* ESTILOS GENERALES */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111827;
+            color: white;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: linear-gradient(135deg, #6d28d9, #2563eb);
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* AUROMENU */
+        #auromenu {
+            background-color: #0f172a;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 18px;
+            position: sticky;
+            top: 0;
+        }
+
+        #auromenu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #auromenu a:hover {
+            color: #60a5fa;
+        }
+
+        /* CONTENIDO */
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        section {
+            margin-bottom: 55px;
+        }
+
+        .bienvenida {
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* BOTONES */
+        button {
+            background-color: #7c3aed;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 18px;
+        }
+
+        button:hover {
+            background-color: #2563eb;
+        }
+
+        /* JUEGOS */
+        .juegos-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .juego {
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .juego:hover {
+            transform: translateY(-5px);
+        }
+
+        .juego h3 {
+            color: #93c5fd;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .juego p {
+            line-height: 1.5;
+            color: #d1d5db;
+        }
+
+        /* CONTACTO */
+        .contacto {
+            text-align: center;
+            background-color: #1f2937;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        /* PIE DE PAGINA */
+        footer {
+            text-align: center;
+            background-color: #0f172a;
+            padding: 20px;
+            color: #9ca3af;
+        }
+
+        /* CELULARES */
+        @media (max-width: 800px) {
+            .juegos-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            #auromenu {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .juegos-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>KARI BYD GAMES</h1>
+        <p>Tu lugar para descubrir juegos increíbles</p>
+    </header>
+
+
+    <!-- AUROMENU -->
+    <nav id="auromenu">
+
+        <a href="#inicio">Inicio</a>
+
+        <a href="#juegos">Juegos</a>
+
+        <a href="#contacto">Contacto</a>
+
+    </nav>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- INICIO -->
+        <section id="inicio" class="bienvenida">
+
+            <h2>Bienvenido a KARI BYD GAMES</h2>
+
+            <p>
+                Conocé algunos de los juegos más populares
+                y elegí cuál querés jugar.
+            </p>
+
+            <button onclick="mostrarMensaje()">
+                ¡Empezar!
+            </button>
+
+        </section>
+
+
+        <!-- JUEGOS -->
+        <section id="juegos">
+
+            <h2>AUROMENU - JUEGOS</h2>
+
+            <div class="juegos-container">
+
+
+                <!-- ROCKET LEAGUE -->
+                <article class="juego">
+
+                    <h3>Rocket League</h3>
+
+                    <p>
+                        Un juego de fútbol con autos donde tenés
+                        que marcar goles usando velocidad,
+                        saltos y trucos.
+                    </p>
+
+                    <button onclick="seleccionarJuego('Rocket League')">
+                        Ver juego
+                    </button>
+
+                </article>
+
+
+                <!-- FORTNITE -->
+                <article class="juego">
+
+                    <h3>Fortnite</h3>
+
+                    <p>
+                        Un juego de acción y supervivencia
+                        donde competís contra otros jugadores
+                        para ser el último en pie.
+                    </p>
+
+                    <button onclick="seleccionarJuego('Fortnite')">
+                        Ver juego
+                    </button>
+
+                </article>
+
+
+                <!-- ROBLOX -->
+                <article class="juego">
+
+                    <h3>Roblox</h3>
+
+                    <p>
+                        Una plataforma con miles de juegos
+                        creados por usuarios, desde aventuras
+                        hasta carreras y simuladores.
+                    </p>
+
+                    <button onclick="seleccionarJuego('Roblox')">
+                        Ver juego
+                    </button>
+
+                </article>
+
+
+                <!-- MINECRAFT -->
+                <article class="juego">
+
+                    <h3>Minecraft</h3>
+
+                    <p>
+                        Un juego de construcción y exploración
+                        donde podés crear mundos usando
+                        diferentes bloques.
+                    </p>
+
+                    <button onclick="seleccionarJuego('Minecraft')">
+                        Ver juego
+                    </button>
+
+                </article>
+
+
+                <!-- EA FC -->
+                <article class="juego">
+
+                    <h3>EA FC</h3>
+
+                    <p>
+                        Un juego de fútbol con equipos,
+                        jugadores y diferentes modos para
+                        competir y armar tu propio equipo.
+                    </p>
+
+                    <button onclick="seleccionarJuego('EA FC')">
+                        Ver juego
+                    </button>
+
+                </article>
+
+
+                <!-- AMONG US -->
+                <article class="juego">
+
+                    <h3>Among Us</h3>
+
+                    <p>
+                        Un juego de misterio y trabajo en equipo
+                        donde algunos jugadores son impostores
+                        y deben ser descubiertos.
+                    </p>
+
+                    <button onclick="seleccionarJuego('Among Us')">
+                        Ver juego
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="contacto">
+
+            <h2>Contacto</h2>
+
+            <p>
+                Gracias por visitar KARI BYD GAMES.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+
+        <p>
+            © 2026 KARI BYD GAMES
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function mostrarMensaje() {
+
+            alert("¡Bienvenido a KARI BYD GAMES!");
+
+        }
+
+
+        function seleccionarJuego(nombre) {
+
+            alert("Seleccionaste: " + nombre);
+
+        }
+
+    </script>
+
+</body>
+</html>
